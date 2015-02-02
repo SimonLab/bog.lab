@@ -18,6 +18,12 @@ h2 {
   color: #777;
 }
 
+a {
+  color: #555;
+   &:hover {
+      color: #222;
+    }
+}
 p {
   font-size: 1.1em;
   line-height: 1.7em;
