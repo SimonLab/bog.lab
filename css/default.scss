@@ -20,11 +20,31 @@ h2 {
 
 a {
   color: #555;
+  text-decoration: none;
+  
+  padding: 20px;
    &:hover {
-      color: #222;
+     color: #222;
     }
 }
 p {
   font-size: 1.1em;
   line-height: 1.7em;
 }
+
+header{
+    display: flex;
+    flex-flow: row nonwrap;
+    justify-content: space-around;
+}
+
+nav{
+  ul{
+    list-style: none;
+    display: flex;
+    flex-flow: row nonwrap;
+    justify-content: flex-end;
+  }
+}
+
+
