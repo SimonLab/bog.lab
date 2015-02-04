@@ -1,3 +1,28 @@
+//define  box-sizing for all the elements
+
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+
+//mixin for grid in flex
+@mixin flex-grid($column, $gutter){
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -$column;
+
+    > *{
+        flex: 0 0 ((100 /$column) + 0%);
+        padding: 1em;
+        border-left: $gutter solid transparent;
+        background-clip: padding-box;
+    }
+}
+
 h1, h2, h3, h4, h5, h6 {
   line-height: 1;
  }
@@ -27,6 +52,7 @@ a {
      color: #222;
     }
 }
+
 p {
   font-size: 1.1em;
   line-height: 1.7em;
@@ -34,17 +60,27 @@ p {
 
 header{
     display: flex;
-    flex-flow: row nonwrap;
+    flex-flow: row wrap;
     justify-content: space-around;
+    
 }
 
 nav{
   ul{
     list-style: none;
     display: flex;
-    flex-flow: row nonwrap;
+    flex-flow: row wrap;
     justify-content: flex-end;
   }
+  li{
+    
+  }
 }
+
+#content{
+  diaplay: flex;
+  flex-flow: row wrap;  
+}
+
 
 
