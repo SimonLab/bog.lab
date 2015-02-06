@@ -1,18 +1,62 @@
+//reset only the element that I use
+body {
+    margin: 0;
+}
+
+ul {
+    margin: 0;
+    padding: 0;
+}
+
+
 //define  box-sizing for all the elements
 
+
 html {
-  box-sizing: border-box;
+    box-sizing: border-box;
 }
 *, *:before, *:after {
-  box-sizing: inherit;
+   box-sizing: inherit;
 }
 
+header{
+    display: flex;
+    flex-flow: row nonwrap;
+    box-shadow: 0 8px 6px -6px black;
+    height: 50px;
+    align-items: center;
+    text-align: center;
+      a{
+	text-decoration: none;
+	color: #333;
+	&:hover{
+	    color: #444;
+	}
+
+      }
+     .item{
+	    flex: 1 0 auto;
+	}
+    ul{
+	  display: flex;
+	  list-style: none;
+	  flex-flow: row nonwrap;
+	  justify-content: center;
+	  li{
+	      padding: 0px 10px;
+	      
+	  }
+      }
+}
+	
+
+/*
 
 //mixin for grid in flex
 @mixin flex-grid($column, $gutter){
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
+    flex-wrap: nonwrap;
     margin-left: -$column;
 
     > *{
@@ -66,11 +110,16 @@ header{
 }
 
 nav{
-  ul{
+    ul{
+	@include flex-grid(3,0px);
+        list-style: none;
+	
+  /*    justify-content: flex-end;
     list-style: none;
     display: flex;
     flex-flow: row wrap;
     justify-content: flex-end;
+  
   }
   li{
     
@@ -82,5 +131,5 @@ nav{
   flex-flow: row wrap;  
 }
 
-
+*/
 
