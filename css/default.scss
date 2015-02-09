@@ -20,17 +20,21 @@ html {
 }
 
 header{
+    position: fixed;
+    top: 0;
     display: flex;
     flex-flow: row nonwrap;
+    background-color: white;
     box-shadow: 0 8px 6px -6px black;
-    height: 50px;
+    height: 40px;
+    width: 100%;
     align-items: center;
     text-align: center;
       a{
 	text-decoration: none;
 	color: #333;
 	&:hover{
-	    color: #444;
+	    color: red;
 	}
 
       }
@@ -48,7 +52,11 @@ header{
 	  }
       }
 }
-	
+
+#content{
+    margin:60px 0 0 0;
+    height: 2000px;
+}
 
 /*
 
