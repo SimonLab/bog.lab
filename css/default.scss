@@ -22,14 +22,16 @@ html {
 header{
     position: fixed;
     top: 0;
-    display: flex;
-    flex-flow: row nonwrap;
+    /* css display: flex; */
+    /* flex-flow: row nonwrap; */
     background-color: white;
-    box-shadow: 0 8px 6px -6px black;
-    height: 40px;
+    /* box-shadow: 0 8px 6px -6px black; */
+    height: 50px;
     width: 100%;
-    align-items: center;
+    /* align-items: center; */
     text-align: center;
+    border-top: 1px solid #E1E8ED;
+    border-bottom: 1px solid #E1E8ED;
       a{
 	text-decoration: none;
 	color: #333;
@@ -38,11 +40,10 @@ header{
 	}
 
       }
-     .item{
-	    flex: 1 0 auto;
-	}
+     
     ul{
-	  display: flex;
+	display: flex;
+	align-items: center;
 	  list-style: none;
 	  flex-flow: row nonwrap;
 	  justify-content: center;
